@@ -1,0 +1,68 @@
+body {
+    background-image: url('자기소개 페이지.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.profile1 {
+    background-color: #ffffff;
+
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profile2 {
+    background-color: #ffffff;
+
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profile3 {
+    background-color: #ffffff;
+
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profile4 {
+    background-color: #ffffff;
+
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.image1 {
+    position: absolute;
+    left: 442px;
+    top: 155px;
+}
+
+.image2 {
+    position: absolute;
+    left: 442px;
+    top: 441px;
+}
+
+.image3 {
+    position: absolute;
+    left: 785px;
+    top: 257px;
+}
+
+.image4 {
+    position: absolute;
+    left: 1040px;
+    top: 157px;
+}
+
+.image5 {
+    position: absolute;
+    left: 1040px;
+    top: 372px;
+}
