@@ -1,1 +1,1 @@
-﻿# git-edu-test
+﻿# haedal-edu
