@@ -1,269 +1,583 @@
+/* ------------------------------
+   기본 설정
+--------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    min-width: 1440px;
-    background-image: url('자기소개 페이지.png');
-    background-size: 1440px 1024px;
-    background-position: center top;
-    background-repeat: no-repeat;
-    /* SF Pro가 설치된 기기에서는 SF Pro 사용. 한글은 운영체제 기본 글꼴로 보완 */
-    font-family: 'SF Pro', 'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont,
+    min-width: 320px;
+    color: #111;
+    background-color: #eef2f5;
+
+    /* SF Pro가 설치된 기기에서는 SF Pro 사용 */
+    font-family: 'SF Pro', 'SF Pro Text', 'SF Pro Display',
+                 -apple-system, BlinkMacSystemFont,
                  'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 }
 
+/* ------------------------------
+   메인 화면
+   1440px 기준 디자인을 화면 너비에 맞춰 표시
+--------------------------------- */
+
 .page {
-    width: 1440px;
-    height: 1024px;
-    margin: 0 auto;
     position: relative;
+    width: 100%;
+    aspect-ratio: 1440 / 1024;
+    margin: 0 auto;
+
+    background-image: url('자기소개 페이지.png');
+    background-size: 100% 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
-.image1 { position: absolute; left: 442px; top: 155px; }
-.image2 { position: absolute; left: 442px; top: 441px; }
-.image3 { position: absolute; left: 785px; top: 257px; }
-.image4 { position: absolute; left: 1040px; top: 157px; }
-.image5 { position: absolute; left: 1040px; top: 372px; }
+.mobile-title {
+    display: none;
+}
 
-.image img { display: block; }
+/* ------------------------------
+   사진 배치
+--------------------------------- */
 
+.image {
+    position: absolute;
+    inset: 0;
+}
+
+/* 데스크톱에서는 사진 그룹의 배치 제한을 없애고
+   각 사진을 메인 화면 기준으로 배치 */
+
+.gallery-column {
+    display: contents;
+}
+
+.image1 {
+    position: absolute;
+    left: 30.69%;
+    top: 15.14%;
+    width: 22.85%;
+    aspect-ratio: 329 / 273;
+}
+
+.image2 {
+    position: absolute;
+    left: 30.69%;
+    top: 43.07%;
+    width: 22.85%;
+    aspect-ratio: 329 / 354;
+}
+
+.image3 {
+    position: absolute;
+    left: 54.51%;
+    top: 25.10%;
+    width: 16.67%;
+    aspect-ratio: 240 / 320;
+}
+
+.image4 {
+    position: absolute;
+    left: 72.22%;
+    top: 15.33%;
+    width: 19.10%;
+    aspect-ratio: 275 / 205;
+}
+
+.image5 {
+    position: absolute;
+    left: 72.22%;
+    top: 36.33%;
+    width: 19.10%;
+    aspect-ratio: 275 / 205;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ------------------------------
+   프로필 카드 배치
+--------------------------------- */
+
+.profile-cards {
+    display: contents;
+}
 
 .profile1 {
     position: absolute;
-    left: 611px;
-    top: 132px;
-    width: 414px;
-    height: 283px;
+    left: 42.43%;
+    top: 12.89%;
+    width: 28.75%;
+    aspect-ratio: 414 / 283;
 }
 
 .profile2 {
     position: absolute;
-    left: 625px;
-    top: 463px;
-    width: 360px;
-    height: 359px;
+    left: 43.40%;
+    top: 45.21%;
+    width: 25%;
+    aspect-ratio: 360 / 359;
 }
 
 .profile3 {
     position: absolute;
-    left: 478px;
-    top: 742px;
-    width: 346px;
-    height: 213px;
+    left: 33.19%;
+    top: 72.46%;
+    width: 24.03%;
+    aspect-ratio: 346 / 213;
 }
 
 .profile4 {
     position: absolute;
-    left: 902px;
-    top: 559px;
-    width: 538px;
-    height: 416px;
+    left: 62.64%;
+    top: 54.59%;
+    width: 37.36%;
+    aspect-ratio: 538 / 416;
 }
 
+.profile1 > img,
+.profile2 > img,
+.profile3 > img,
+.profile4 > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-h2 {
+/* 카드 안의 제목과 글자 */
+
+.page h2 {
     position: absolute;
-    top: 45px;
-    left: 146px;
+    top: 15.9%;
+    left: 35.3%;
     margin: 0;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 18px;
-    white-space: nowrap;
+
     color: #222;
-}
-
-p {
-    margin: 0;
-    font-size: 13px;
+    font-size: clamp(10px, 0.9vw, 15px);
     font-weight: 700;
-    line-height: 20px;
-    color: #0c0c0c;
+    line-height: 1.3;
+    white-space: nowrap;
 }
 
-strong { font-weight: 700; }
+.page p {
+    margin: 0;
+    color: #0c0c0c;
+    font-size: clamp(10px, 0.9vw, 15px);
+    font-weight: 700;
+    line-height: 1.55;
+}
 
+.page strong {
+    font-weight: 700;
+}
 
-.emoji { display: inline-block; filter: grayscale(1); }
+.emoji {
+    display: inline-block;
+    filter: grayscale(1);
+}
 
+/* PROFILE #1 */
 
 .info {
     position: absolute;
-    left: 69px;
-    top: 85px;
+    left: 16.67%;
+    top: 30%;
 }
 
 .contact {
     position: absolute;
-    left: 69px;
-    top: 153px;
+    left: 16.67%;
+    top: 54.1%;
+}
+
+/* PROFILE #2 */
+
+.profile2 h2 {
+    left: 40.56%;
+    top: 12.53%;
 }
 
 .hobby {
     position: absolute;
-    left: 69px;
-    top: 84px;
+    left: 19.17%;
+    top: 23.4%;
 }
 
 .interest {
     position: absolute;
-    left: 69px;
-    top: 134px;
+    left: 19.17%;
+    top: 37.3%;
 }
 
 .bucket-list {
     position: absolute;
-    left: 69px;
-    top: 184px;
+    left: 19.17%;
+    top: 51.3%;
+}
+
+/* PROFILE #3 */
+
+.profile3 h2 {
+    left: 42.2%;
+    top: 21.1%;
 }
 
 .pros-cons {
     position: absolute;
-    left: 70px;
-    top: 84px;
+    left: 20.2%;
+    top: 39.4%;
 }
 
-.profile4 h2 { left: 146px; top: 45px; }
+/* MUSIC */
 
-.profile1 img, .profile2 img, .profile3 img, .profile4 img {
-    display: block;
-    width: 100%;
-    height: 100%;
+.profile4 h2 {
+    left: 27.1%;
+    top: 10.8%;
 }
+
+/* ------------------------------
+   목표 체크리스트
+--------------------------------- */
 
 .goal-section {
-  margin-top:40px;
-  padding:24px;
-  border-radius:16px;
-  background-color: #f5f5f5;
+    width: min(900px, calc(100% - 32px));
+    margin: 40px auto 28px;
+    padding: 24px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.goal-section h2 {
+    margin: 0;
+    font-size: 22px;
 }
 
 .goal-description {
-  color: #555;
+    margin-top: 8px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .goal-input-box {
-  display:flex;
-  gap:8px;
-  margin-top:16px;
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
 }
 
 #goalInput {
-  flex:1;
-  padding:10px;
-  border:1pxsolid #ddd;
-  border-radius:8px;
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font: inherit;
 }
 
 #addGoalBtn {
-  padding:10px16px;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
 }
 
 #errorMessage {
-  color:crimson;
-  min-height:20px;
+    min-height: 20px;
+    margin-top: 8px;
+    color: crimson;
+    font-size: 13px;
 }
 
 #goalCount {
-  font-size:14px;
-  color: #555;
+    color: #555;
+    font-size: 14px;
 }
 
 #goalList {
-  margin-top:16px;
-  padding-left:0;
-  list-style:none;
+    margin-top: 16px;
+    padding-left: 0;
+    list-style: none;
 }
 
 .goal-item {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  margin-bottom:8px;
-  padding:12px;
-  border-radius:10px;
-  background-color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
 }
 
 .goal-text {
-  cursor:pointer;
+    cursor: pointer;
 }
 
 .goal-text.done {
-  color:gray;
-  text-decoration:line-through;
+    color: gray;
+    text-decoration: line-through;
 }
 
 .delete-btn {
-  border:none;
-  background-color:transparent;
-  cursor:pointer;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
+/* ------------------------------
+   방명록
+--------------------------------- */
+
 .guestbook-section {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: min(500px, calc(100% - 32px));
+    margin: 0 auto 40px;
+    padding: 20px;
+
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .guestbook-section h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #333;
+    margin: 0 0 15px;
+    color: #333;
 }
 
-#server-msg, #my-msg {
-  background-color: white;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  margin-bottom: 15px;
-  font-size: 15px;
-  color: #555;
-  line-height: 1.5;
+#server-msg,
+#my-msg {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #555;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 .write-area {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 #guest-name {
-  width: 80px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
+    width: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
 }
 
 #guest-msg {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
 }
 
-#guest-name:focus, #guest-msg:focus {
-  border-color: #007bff;
+#guest-name:focus,
+#guest-msg:focus {
+    border-color: #007bff;
 }
 
 #submit-btn {
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #submit-btn:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
+}
+
+/* ------------------------------
+   태블릿 및 모바일 화면
+--------------------------------- */
+
+@media (max-width: 1000px) {
+    body {
+        background-color: #f1f3f5;
+    }
+
+    .page {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        padding: 24px;
+
+        background-image: none;
+        background-color: #fff;
+    }
+
+    .mobile-title {
+        display: block;
+        margin: 0;
+        color: #222;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    /* 사진을 두 개의 세로 열로 배치 */
+
+    .image {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        width: 100%;
+    }
+
+    .gallery-column {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        min-width: 0;
+    }
+
+    .gallery-left {
+        grid-column: 1;
+    }
+
+    .gallery-right {
+        grid-column: 2;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4,
+    .image5 {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .image1 { aspect-ratio: 329 / 273; }
+    .image2 { aspect-ratio: 329 / 354; }
+    .image3 { aspect-ratio: 240 / 320; }
+    .image4,
+    .image5 { aspect-ratio: 275 / 205; }
+
+    /* 프로필 카드를 사진 아래에 세로로 배치 */
+
+    .profile-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .profile1,
+    .profile2,
+    .profile3,
+    .profile4 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .profile1 {
+        max-width: 414px;
+        aspect-ratio: 414 / 283;
+    }
+
+    .profile2 {
+        max-width: 360px;
+        aspect-ratio: 360 / 359;
+    }
+
+    .profile3 {
+        max-width: 346px;
+        aspect-ratio: 346 / 213;
+    }
+
+    .profile4 {
+        max-width: 538px;
+        aspect-ratio: 538 / 416;
+    }
+
+    .page h2 {
+        font-size: 14px;
+    }
+
+    .page p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .goal-section {
+        margin-top: 24px;
+    }
+}
+
+/* 휴대전화처럼 폭이 좁은 화면 */
+
+@media (max-width: 560px) {
+    .page {
+        gap: 20px;
+        padding: 20px 14px;
+    }
+
+    .image {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .gallery-left,
+    .gallery-right {
+        grid-column: 1;
+    }
+
+    .gallery-column {
+        gap: 12px;
+    }
+
+    .goal-section {
+        padding: 18px;
+    }
+
+    .write-area {
+        flex-wrap: wrap;
+    }
+
+    #guest-name {
+        width: 100%;
+    }
+
+    #guest-msg {
+        flex-basis: 100%;
+    }
+
+    #submit-btn {
+        margin-left: auto;
+    }
 }

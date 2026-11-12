@@ -7,109 +7,130 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="page">
+
+    <main class="page">
+        <h1 class="mobile-title">ABOUT ME</h1>
+
+        <!-- 사진 영역 -->
         <div class="image">
-            <div class="image1">
-                <img src="프로필 사진1.png" alt="첫 번째 프로필 사진" width="329" height="273">
+            <div class="gallery-column gallery-left">
+                <div class="image1">
+                    <img src="프로필 사진1.png" alt="첫 번째 프로필 사진">
+                </div>
+                <div class="image2">
+                    <img src="프로필 사진2.png" alt="두 번째 프로필 사진">
+                </div>
             </div>
-            <div class="image2">
-                <img src="프로필 사진2.png" alt="두 번째 프로필 사진" width="329" height="354">
-            </div>
-            <div class="image3">
-                <img src="취미1.png" alt="취미 사진 1" width="240" height="320">
-            </div>
-            <div class="image4">
-                <img src="취미2.png" alt="취미 사진 2" width="275" height="205">
-            </div>
-            <div class="image5">
-                <img src="취미3.png" alt="취미 사진 3" width="275" height="205">
+
+            <div class="gallery-column gallery-right">
+                <div class="image3">
+                    <img src="취미1.png" alt="독서하는 모습">
+                </div>
+                <div class="image4">
+                    <img src="취미2.png" alt="좋아하는 캐릭터 수집">
+                </div>
+                <div class="image5">
+                    <img src="취미3.png" alt="좋아하는 인형과 굿즈">
+                </div>
             </div>
         </div>
 
-        <div class="profile1">
-            <img src="간단한 자기소개.png" alt="프로필 창 1" width="414" height="283">
-            <h2>PROFILE #1</h2>
-            <div class="info">
-                <p>
-                    <strong>NAME :</strong> 국미승<br>
-                    <strong>AGE :</strong> 21<br>
-                    <strong>MAJOR :</strong> 컴퓨터학부 글로벌소프트웨어융합전공
-                </p>
-            </div>
-            <div class="contact">
-                <p>
-                    <span class="emoji">📞</span> 010-7616-8810<br>
-                    <span class="emoji">✉️</span> ms040444@knu.ac.kr
-                </p>
-            </div>
+        <!-- 프로필 카드 영역 -->
+        <div class="profile-cards">
+            <section class="profile1">
+                <img src="간단한 자기소개.png" alt="프로필 카드 배경">
+                <h2>PROFILE #1</h2>
+
+                <div class="info">
+                    <p>
+                        <strong>NAME :</strong> 국미승<br>
+                        <strong>AGE :</strong> 21<br>
+                        <strong>MAJOR :</strong> 컴퓨터학부 글로벌소프트웨어융합전공
+                    </p>
+                </div>
+
+                <div class="contact">
+                    <p>
+                        <span class="emoji">📞</span> 010-7616-8810<br>
+                        <span class="emoji">✉️</span> ms040444@knu.ac.kr
+                    </p>
+                </div>
+            </section>
+
+            <section class="profile2">
+                <img src="간단한 자기소개 (1).png" alt="프로필 카드 배경">
+                <h2>PROFILE #2</h2>
+
+                <div class="hobby">
+                    <p>
+                        <strong>HOBBY :</strong><br>
+                        독서, 영화 관람, 좋아하는 물건 모으기
+                    </p>
+                </div>
+
+                <div class="interest">
+                    <p>
+                        <strong>INTEREST :</strong><br>
+                        귀여운 것 (ex. 먼작귀, 케로로)
+                    </p>
+                </div>
+
+                <div class="bucket-list">
+                    <p>
+                        <strong>BUCKET LIST :</strong><br>
+                        스페인 바르셀로나 여행,<br>
+                        기부하기, 내집마련,<br>
+                        면허따서 운전해보기
+                    </p>
+                </div>
+            </section>
+
+            <section class="profile3">
+                <img src="간단한 자기소개 (2).png" alt="프로필 카드 배경">
+                <h2>PROFILE #3</h2>
+
+                <div class="pros-cons">
+                    <p>
+                        <strong>PROS :</strong> 잘 웃는다<br>
+                        <strong>CONS :</strong> 잠이 많고 게으르다
+                    </p>
+                </div>
+            </section>
         </div>
 
-        <div class="profile2">
-            <img src="간단한 자기소개 (1).png" alt="프로필 창 2" width="360" height="359">
-            <h2>PROFILE #2</h2>
-            <div class="hobby">
-                <p>
-                    <strong>HOBBY :</strong><br>
-                    독서, 영화 관람, 좋아하는 물건 모으기
-                </p>
-            </div>
-            <div class="interest">
-                <p>
-                    <strong>INTEREST :</strong><br>
-                    귀여운 것 (ex. 먼작귀, 케로로)
-                </p>
-            </div>
-            <div class="bucket-list">
-                <p>
-                    <strong>BUCKET LIST :</strong><br>
-                    스페인 바르셀로나 여행,<br>
-                    기부하기, 내집마련,<br>
-                    면허따서 운전해보기
-                </p>
-            </div>
-        </div>
-
-        <div class="profile3">
-            <img src="간단한 자기소개 (2).png" alt="프로필 창 3" width="346" height="213">
-            <h2>PROFILE #3</h2>
-            <div class="pros-cons">
-                <p>
-                    <strong>PROS :</strong> 잘 웃는다<br>
-                    <strong>CONS :</strong> 잠이 많고 게으르다
-                </p>
-            </div>
-        </div>
-
-        <div class="profile4">
-            <img src="좋아하는 음악.png" alt="좋아하는 음악 화면" width="538" height="416">
+        <!-- 좋아하는 음악 -->
+        <section class="profile4">
+            <img src="좋아하는 음악.png" alt="좋아하는 음악 화면">
             <h2>My Favorite Music</h2>
+        </section>
+    </main>
+
+    <!-- 목표 체크리스트 -->
+    <section class="goal-section">
+        <h2>My Goals</h2>
+        <p class="goal-description">
+            앞으로 이루고 싶은 목표를 체크리스트로 관리해보세요.
+        </p>
+
+        <div class="goal-input-box">
+            <input
+                id="goalInput"
+                type="text"
+                placeholder="예: JavaScript로 자기소개 페이지 완성하기"
+            >
+            <button id="addGoalBtn">추가</button>
         </div>
-    </div>
-	<section class="goal-section">
-		<h2>My Goals</h2>
-		<p class="goal-description">
-			앞으로 이루고 싶은 목표를 체크리스트로 관리해보세요.
-		</p>
 
-		<div class="goal-input-box">
-			<input
-				id="goalInput"
-				type="text"
-				placeholder="예: JavaScript로 자기소개 페이지 완성하기"
-			>
-			<button id="addGoalBtn">추가</button>
-		</div>
+        <p id="errorMessage"></p>
+        <p id="goalCount">현재 목표 0개</p>
+        <ul id="goalList"></ul>
+    </section>
 
-		<p id="errorMessage"></p>
-		<p id="goalCount">현재 목표 0개</p>
-		<ul id="goalList"></ul>
-	</section>
-
-    <div class="guestbook-section">
+    <!-- 방명록 -->
+    <section class="guestbook-section">
         <h3>방명록</h3>
-        
-        <p id="server-msg">데이터를 불러오는 중입니다...</p>
 
+        <p id="server-msg">데이터를 불러오는 중입니다...</p>
         <p id="my-msg">아직 작성된 새 방명록이 없습니다.</p>
 
         <div class="write-area">
@@ -117,9 +138,8 @@
             <input type="text" id="guest-msg" placeholder="응원 한마디 남겨주세요!">
             <button id="submit-btn">등록</button>
         </div>
-    </div>
+    </section>
 
     <script src="./script.js"></script>
-
 </body>
 </html>
