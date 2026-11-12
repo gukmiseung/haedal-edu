@@ -1,68 +1,269 @@
 body {
+    margin: 0;
+    min-width: 1440px;
     background-image: url('자기소개 페이지.png');
-    background-size: cover;
-    background-position: center;
+    background-size: 1440px 1024px;
+    background-position: center top;
     background-repeat: no-repeat;
+    /* SF Pro가 설치된 기기에서는 SF Pro 사용. 한글은 운영체제 기본 글꼴로 보완 */
+    font-family: 'SF Pro', 'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont,
+                 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 }
 
-.profile1 {
-    background-color: #ffffff;
+.page {
+    width: 1440px;
+    height: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
 
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
+.image1 { position: absolute; left: 442px; top: 155px; }
+.image2 { position: absolute; left: 442px; top: 441px; }
+.image3 { position: absolute; left: 785px; top: 257px; }
+.image4 { position: absolute; left: 1040px; top: 157px; }
+.image5 { position: absolute; left: 1040px; top: 372px; }
+
+.image img { display: block; }
+
+
+.profile1 {
+    position: absolute;
+    left: 611px;
+    top: 132px;
+    width: 414px;
+    height: 283px;
 }
 
 .profile2 {
-    background-color: #ffffff;
-
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
+    position: absolute;
+    left: 625px;
+    top: 463px;
+    width: 360px;
+    height: 359px;
 }
 
 .profile3 {
-    background-color: #ffffff;
-
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
+    position: absolute;
+    left: 478px;
+    top: 742px;
+    width: 346px;
+    height: 213px;
 }
 
 .profile4 {
-    background-color: #ffffff;
-
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
+    position: absolute;
+    left: 902px;
+    top: 559px;
+    width: 538px;
+    height: 416px;
 }
 
-.image1 {
+
+h2 {
     position: absolute;
-    left: 442px;
-    top: 155px;
+    top: 45px;
+    left: 146px;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    white-space: nowrap;
+    color: #222;
 }
 
-.image2 {
-    position: absolute;
-    left: 442px;
-    top: 441px;
+p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #0c0c0c;
 }
 
-.image3 {
+strong { font-weight: 700; }
+
+
+.emoji { display: inline-block; filter: grayscale(1); }
+
+
+.info {
     position: absolute;
-    left: 785px;
-    top: 257px;
+    left: 69px;
+    top: 85px;
 }
 
-.image4 {
+.contact {
     position: absolute;
-    left: 1040px;
-    top: 157px;
+    left: 69px;
+    top: 153px;
 }
 
-.image5 {
+.hobby {
     position: absolute;
-    left: 1040px;
-    top: 372px;
+    left: 69px;
+    top: 84px;
+}
+
+.interest {
+    position: absolute;
+    left: 69px;
+    top: 134px;
+}
+
+.bucket-list {
+    position: absolute;
+    left: 69px;
+    top: 184px;
+}
+
+.pros-cons {
+    position: absolute;
+    left: 70px;
+    top: 84px;
+}
+
+.profile4 h2 { left: 146px; top: 45px; }
+
+.profile1 img, .profile2 img, .profile3 img, .profile4 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.goal-section {
+  margin-top:40px;
+  padding:24px;
+  border-radius:16px;
+  background-color: #f5f5f5;
+}
+
+.goal-description {
+  color: #555;
+}
+
+.goal-input-box {
+  display:flex;
+  gap:8px;
+  margin-top:16px;
+}
+
+#goalInput {
+  flex:1;
+  padding:10px;
+  border:1pxsolid #ddd;
+  border-radius:8px;
+}
+
+#addGoalBtn {
+  padding:10px16px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+#errorMessage {
+  color:crimson;
+  min-height:20px;
+}
+
+#goalCount {
+  font-size:14px;
+  color: #555;
+}
+
+#goalList {
+  margin-top:16px;
+  padding-left:0;
+  list-style:none;
+}
+
+.goal-item {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:8px;
+  padding:12px;
+  border-radius:10px;
+  background-color:white;
+}
+
+.goal-text {
+  cursor:pointer;
+}
+
+.goal-text.done {
+  color:gray;
+  text-decoration:line-through;
+}
+
+.delete-btn {
+  border:none;
+  background-color:transparent;
+  cursor:pointer;
+}
+
+.guestbook-section {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.guestbook-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#server-msg, #my-msg {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.write-area {
+  display: flex;
+  gap: 10px;
+}
+
+#guest-name {
+  width: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+#guest-msg {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+#guest-name:focus, #guest-msg:focus {
+  border-color: #007bff;
+}
+
+#submit-btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#submit-btn:hover {
+  background-color: #0056b3;
 }
